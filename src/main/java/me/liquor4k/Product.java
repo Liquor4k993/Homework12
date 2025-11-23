@@ -23,8 +23,12 @@ public class Product {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
 
         Product product = (Product) obj;
         return id == product.id &&
@@ -37,8 +41,16 @@ public class Product {
     }
 
     // Геттеры для полей
-    public int getId() { return id; }
-    public String getName() { return name; }
-    public int getPrice() { return price; }
-    public String getCategory() { return category; }
+    public int getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public int getPrice() {
+        return price;
+    }
+    public String getCategory() {
+        return category;
+        }
 }

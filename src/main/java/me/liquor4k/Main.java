@@ -63,7 +63,7 @@ public class Main {
         System.out.println("order1.equals(null): " + order1.equals(null)); // false
 
         // Тестирование с null значениями
-        System.out.println("\n=== ТЕСТИРОВАНИЕ С NULL ЗНАЧЕНИЯМИ ===");
+        System.out.println("\nТЕСТИРОВАНИЕ С NULL ЗНАЧЕНИЯМИ");
 
         Product productWithNull = new Product(3001, null, 500, null);
         Product productWithNull2 = new Product(3001, "Тестовый товар", 500, null);

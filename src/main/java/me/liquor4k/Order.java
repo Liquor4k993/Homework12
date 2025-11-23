@@ -19,8 +19,12 @@ public class Order {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
 
         Order order = (Order) obj;
 
@@ -30,18 +34,30 @@ public class Order {
         }
 
         // Сравниваем массивы товаров
-        if (basket == null && order.basket == null) return true;
-        if (basket == null || order.basket == null) return false;
-        if (basket.length != order.basket.length) return false;
+        if (basket == null && order.basket == null) {
+            return true;
+        }
+        if (basket == null || order.basket == null) {
+            return false;
+        }
+        if (basket.length != order.basket.length) {
+            return false;
+        }
 
         // Поэлементное сравнение товаров с учетом порядка
         for (int i = 0; i < basket.length; i++) {
             Product product1 = basket[i];
             Product product2 = order.basket[i];
 
-            if (product1 == null && product2 == null) continue;
-            if (product1 == null || product2 == null) return false;
-            if (!product1.equals(product2)) return false;
+            if (product1 == null && product2 == null) {
+                continue;
+            }
+            if (product1 == null || product2 == null) {
+                return false;
+            }
+            if (!product1.equals(product2)) {
+                return false;
+            }
         }
 
         return true;
@@ -55,7 +71,11 @@ public class Order {
     }
 
     // Геттеры
-    public String getCustomer() { return customer; }
-    public Product[] getBasket() { return basket; }
+    public String getCustomer() {
+        return customer;
+    }
+    public Product[] getBasket() {
+        return basket;
+    }
 }
 
